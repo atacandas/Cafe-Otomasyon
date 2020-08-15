@@ -1,0 +1,31 @@
+﻿@model Cafe.MvcUI.Models.ViewModels.ListViewModels.ListTitlesViewModel
+@{
+    ViewBag.Title = "TitleManiPage";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Edit Title</h2>
+<hr />
+@if (TempData["message"] != null)
+{
+    <div class="alert alert-info">@TempData["message"]</div>
+}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th> Title Name</th>
+            <th> Description</th>
+            <th> @Html.ActionLink("Add New Title", "AddNewTitle", null, new { @class = "btn btn-success" })</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Titles)
+        {
+            <tr>
+                <td>@item.TitleName</td>
+                <td>@item.Description</td>
+                <td>@Html.ActionLink("Update", "UpdateTitle", new { id = item.TitleID }, new { @class = "btn btn-info" })   @Html.ActionLink("Delete", "DeleteTitle", new { id = item.TitleID }, new { @class = "btn btn-danger btn-xs" })</td>
+            </tr>
+        }
+    </tbody>
+</table>

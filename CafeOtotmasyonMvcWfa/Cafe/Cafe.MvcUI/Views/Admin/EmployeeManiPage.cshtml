@@ -1,0 +1,44 @@
+﻿@model Cafe.MvcUI.Models.ViewModels.ListViewModels.ListEmployeesViewModel
+@{
+    ViewBag.Title = "EmployeeManiPage";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Edit Employee</h2>
+<hr />
+@if (TempData["message"] != null)
+{
+    <div class="alert alert-info">@TempData["message"]</div>
+}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th> Full Name</th>
+            <th> Title</th>
+            <th> Address</th>
+            <th> Birth Date</th>
+            <th> Hire Date</th>
+            <th> Phone</th>
+            <th> User Name</th>
+            <th> Password</th>
+            <th> @Html.ActionLink("Add New Employee", "AddNewEmployee", null, new { @class = "btn btn-success" })</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Employees)
+        {
+        <tr>
+            <td>@item.FirstName @item.LastName</td>
+            <td>@item.Title.TitleName</td>
+            <td>@item.Address</td>
+            <td>@item.BirthDate</td>
+            <td>@item.HireDate</td>
+            <td>@item.Phone</td>
+            <td>@item.UserName</td>
+            <td>@item.Password</td>
+            <td>@Html.ActionLink("Update", "UpdateEmployee", new { id = item.EmployeeID }, new { @class = "btn btn-info" })   @Html.ActionLink("Delete", "DeleteEmployee", new { id = item.EmployeeID }, new { @class = "btn btn-danger btn-xs" })</td>
+
+        </tr>
+        }
+    </tbody>
+</table>

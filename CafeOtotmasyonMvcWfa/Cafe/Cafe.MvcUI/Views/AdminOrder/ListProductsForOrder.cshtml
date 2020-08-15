@@ -1,0 +1,37 @@
+﻿@model Cafe.MvcUI.Models.ViewModels.ListViewModels.ListProductsViewModel
+
+@{
+    ViewBag.Title = "ListProductsForOrder";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Take Order</h2>
+<hr />
+@if (TempData["message"] != null)
+{
+    <div class="alert alert-info">@TempData["message"]</div>
+}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th> Product Name</th>
+            <th> Category Name</th>
+            <th> Unit Price</th>
+            <th> Stok</th>
+            <th> @Html.ActionLink("Go To Order", "ListCartItem", null, new { @class = "btn btn-info" })</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.Category.CategoryName</td>
+                <td>@item.UnitPrice</td>
+                <td>@item.UnitsInStock</td>
+                <td>@Html.ActionLink("Add To Order", "AddCart", new { id = item.ProductID }, new { @class = "btn btn-success" }) </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

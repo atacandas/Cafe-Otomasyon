@@ -1,0 +1,35 @@
+﻿@model Cafe.MvcUI.Models.ViewModels.ListViewModels.ListOrderDetailViewModel
+
+@{
+    ViewBag.Title = "ShowOrderDetail";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Order Detail</h2>
+<hr />
+@if (TempData["message"] != null)
+{
+    <div class="alert alert-info">@TempData["message"]</div>
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th> Product Name</th>
+            <th> Unit Price</th>
+            <th> Amount</th>
+            <th> Product Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderDetails)
+        {
+            <tr>
+                <td>@item.Product.ProductName</td>
+                <td>@item.UnitPrice</td>
+                <td>@item.ProductAmount</td>
+                <td>@item.ProductTotalPrice</td>
+            </tr>
+        }
+    </tbody>
+</table>

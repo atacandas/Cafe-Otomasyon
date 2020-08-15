@@ -1,0 +1,32 @@
+﻿@model Cafe.MvcUI.Models.ViewModels.ListViewModels.ListCategoriesViewModel
+@{
+    ViewBag.Title = "CategoryManiPage";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Edit Categories</h2>
+<hr />
+@if (TempData["message"] != null)
+{
+    <div class="alert alert-info">@TempData["message"]</div>
+}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th> Category Name</th>
+            <th> Description</th>
+            <th> @Html.ActionLink("Add New Category", "AddNewCategory", null, new { @class = "btn btn-success" })</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Categories)
+        {
+            <tr>
+                <td>@item.CategoryName</td>
+                <td>@item.Description</td>
+                <td>@Html.ActionLink("Update", "UpdateCategory", new { id = item.CategoryID }, new { @class = "btn btn-info" })   @Html.ActionLink("Delete", "DeleteCategory", new { id = item.CategoryID }, new { @class = "btn btn-danger btn-xs" })</td>
+
+            </tr>
+        }
+    </tbody>
+</table>

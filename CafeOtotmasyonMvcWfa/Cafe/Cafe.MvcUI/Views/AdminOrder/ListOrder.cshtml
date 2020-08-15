@@ -1,0 +1,40 @@
+﻿@using Cafe.Entity.Concretes
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Order>
+@{
+    ViewBag.Title = "ListOrder";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>List Order</h2>
+<hr />
+@if (TempData["message"] != null)
+{
+    <div class="alert alert-info">@TempData["message"]</div>
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th> Order ID</th>
+            <th> Employee Name</th>
+            <th> Order Date</th>
+            <th> Total Price</th>
+            <th> Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.OrderID</td>
+                <td>@item.Employee.FirstName @item.Employee.LastName</td>
+                <td>@item.OrderDate</td>
+                <td>@item.OrderTotalPrice</td>
+                <td>@Html.ActionLink("Detail", "ShowOrderDetail", new { id = item.OrderID }, new { @class = "btn btn-info" })
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("ListOrder", new { sayfa }))

@@ -1,0 +1,17 @@
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\obj\Debug\Cafe.Bll.csprojAssemblyReference.cache
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\bin\Debug\Cafe.Bll.dll.config
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\bin\Debug\Cafe.Bll.dll
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\bin\Debug\Cafe.Bll.pdb
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\bin\Debug\Cafe.Dal.dll
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\bin\Debug\Cafe.Entity.dll
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\bin\Debug\EntityFramework.dll
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\bin\Debug\Cafe.Dal.pdb
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\bin\Debug\Cafe.Dal.dll.config
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\bin\Debug\Cafe.Entity.pdb
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\bin\Debug\Cafe.Entity.dll.config
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\bin\Debug\EntityFramework.xml
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\obj\Debug\Cafe.Bll.csproj.CopyComplete
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\obj\Debug\Cafe.Bll.dll
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Bll\obj\Debug\Cafe.Bll.pdb

@@ -1,0 +1,41 @@
+﻿@model Cafe.MvcUI.Models.ViewModels.ListViewModels.ListCartsViewModel
+@{
+    ViewBag.Title = "ListCartItem";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Take Order</h2>
+<hr />
+@using (Html.BeginForm("UpdateCart","AdminOrder", FormMethod.Post))
+{
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Price</th>
+                <th>Sub Price</th>
+                <th><button type="submit" class="btn btn-primary">Update</button></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.CartItems)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@Html.TextBox("amounts", item.Amount, new { @class = "form-control" })</td>
+                    <td>@item.Price.ToString()</td>
+                    <td>@item.SubPrice.ToString()</td>
+                    <td>@Html.ActionLink("Delete", "DeleteCartItem", new { id = item.ID }, new { @class = "btn btn-danger btn-xs" })</td>
+                </tr>
+            }
+            <tr>
+                <td><h2>Total Price</h2></td>
+                <td></td>
+                <td></td>
+                <td><h2>@Model.TotalPrice.ToString()</h2></td>
+                <td>@Html.ActionLink("Take Order","TakeOrder",null,new { @class = "btn btn-success btn-xs" })</td>
+            </tr>
+        </tbody>
+    </table>
+}

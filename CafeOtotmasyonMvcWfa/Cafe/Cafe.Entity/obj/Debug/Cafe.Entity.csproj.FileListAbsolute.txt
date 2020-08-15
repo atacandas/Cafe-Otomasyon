@@ -1,0 +1,11 @@
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Entity\bin\Debug\Cafe.Entity.dll.config
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Entity\bin\Debug\Cafe.Entity.dll
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Entity\bin\Debug\Cafe.Entity.pdb
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Entity\bin\Debug\EntityFramework.dll
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Entity\bin\Debug\EntityFramework.xml
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Entity\obj\Debug\Cafe.Entity.csproj.CopyComplete
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Entity\obj\Debug\Cafe.Entity.dll
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Entity\obj\Debug\Cafe.Entity.pdb
+E:\Ata\yazılım\visiul studio\yapılanlar\Cafe\Cafe.Entity\obj\Debug\Cafe.Entity.csprojAssemblyReference.cache

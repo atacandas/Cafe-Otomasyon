@@ -1,0 +1,155 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="~/Content/all.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        #anaKatman {
+            padding: 0px;
+            width: 1750px;
+            margin-top: 0px;
+            margin-right: 10px;
+            margin-bottom: 0px;
+            margin-left: 10px;
+            float: left;
+        }
+
+        #solKatman {
+            font-weight: bold;
+            padding: 0px;
+            float: left;
+            width: 200px;
+            margin-top: 5px;
+            margin-right: 0px;
+            margin-bottom: 5px;
+            margin-left: 0px;
+            border: 1px solid #000;
+        }
+
+        #ortaKatman {
+            margin: 10px;
+            padding: 5px;
+            float: left;
+            width: 1500px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .vertical-menu {
+            width: 198px;
+        }
+
+            .vertical-menu a {
+                background-color: #eee;
+                color: black;
+                display: block;
+                padding: 12px;
+                text-decoration: none;
+            }
+
+                .vertical-menu a.verticalMenuItem:hover {
+                    background-color: #ccc;
+                }
+
+                .vertical-menu a.active {
+                    background-color: dimgrey;
+                    color: white;
+                }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border: groove;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #ddd;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <ul class="navbar-nav col-12">
+                <li class="nav-item active col-1">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown col-md-1">
+                    <a class="nav-link">Edit</a>
+                    <div class="dropdown-content">
+                        <a href="~/Admin/ProductManiPage">Products</a>
+                        <a href="~/Admin/CategoryManiPage">Categories</a>
+                        <a href="~/Admin/EmployeeManiPage">Employees</a>
+                        <a href="~/Admin/TitleManiPage">Titles</a>
+                    </div>
+                </li>
+                <li class="nav-item col-1">
+                    <a class="nav-link" href="~/AdminOrder/ListOrder">Show Orders</a>
+                </li>
+                <li class="nav-item col-1">
+                    <a class="nav-link " href="~/AdminOrder/ListProductsForOrder">Take Order</a>
+                </li>
+                <li class="col-7"></li>
+                <li class="nav-item dropdown col-1">
+                    <a class="nav-link">@Session["myLoginName"]</a>
+                    <div class="dropdown-content">
+                        <a href="~/Account/AdminLogout">Logout</a>      
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div id="anaKatman">
+        <div id="solKatman">
+            <div class="vertical-menu">
+                <a href="#" class="active" style="font-size:150%">Home</a>
+                <a style="color:goldenrod; font-size:150%">Order</a>
+                <a href="~/AdminOrder/ListProductsForOrder" class="verticalMenuItem">Take Order</a>
+                <a href="~/AdminOrder/ListOrder" class="verticalMenuItem">List Orders</a>
+                <a style="color:goldenrod; font-size:150%">Edit</a>
+                <a href="~/Admin/ProductManiPage" class="verticalMenuItem">Products</a>
+                <a href="~/Admin/CategoryManiPage" class="verticalMenuItem">Categories</a>
+                <a href="~/Admin/EmployeeManiPage" class="verticalMenuItem">Employees</a>
+                <a href="~/Admin/TitleManiPage" class="verticalMenuItem">Titles</a>
+            </div>
+        </div>
+        <div id="ortaKatman"> 
+                @RenderBody()
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+
+
+
